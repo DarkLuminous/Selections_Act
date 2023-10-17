@@ -1,3 +1,6 @@
+import os
+from time import sleep
+
 def Chinese_Zodiac_Sign():
     Brt_year = input("Year of Birth:")
 
@@ -41,15 +44,21 @@ def Chinese_Zodiac_Sign():
     elif z_pick == 12:
         zodiac = ("Snake")
     print("Your zodiac sign is", zodiac)
+    input("Press any Key To CONTINUE . . .")
+    sleep(2)
+    os.system('cls')
+    _Again()
 
-Chinese_Zodiac_Sign()
-
-"""
-_again = input("Again? 1/YES|2/NO :")
+def _Again():
+    _again = input("Again? 1/YES|2/NO :")
  
-if _again == 1:
-    Chinese_Zodiac_Sign()
+    if int(_again) == 1:
+     print("Wait for a seconds")
+     sleep(2)
+     os.system('cls')
+     Chinese_Zodiac_Sign()
         
-elif _again == 2:
-    print("Thank You!")
-"""                 #working in Progress
+    elif int(_again) == 2:
+     print("Thank You!")
+        
+Chinese_Zodiac_Sign()
